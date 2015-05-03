@@ -1,4 +1,11 @@
-<h1>Hello Rails!</h1>
-<%= video_tag("trailer.mp4") %>
-<%= link_to "My Blog", controller: 'articles' %>
-<%= link_to "New Article", new_article_path %>
+<div id="mimi">
+	<p>
+	<%= link_to "My Blog", controller: 'articles' %>
+	</p>
+	<p>
+	<%= link_to "New Article", new_article_path %>
+	</p>
+</div>
+<div id="video">
+	<%= video_tag("trailer.mp4") %>
+</div>
