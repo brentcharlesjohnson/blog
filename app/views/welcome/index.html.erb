@@ -1,11 +1,13 @@
-<div id="mimi">
-	<p>
-	<%= link_to "My Blog", controller: 'articles' %>
-	</p>
-	<p>
-	<%= link_to "New Article", new_article_path %>
-	</p>
-</div>
-<div id="video">
-	<%= video_tag("trailer.mp4") %>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-12 embed-responsive embed-responsive-16by9">
+			<%= video_tag("trailer.mp4", class: "embed-responsive-item") %> 
+			<div class="row">
+				<div class="col-sm-3 col-sm-offset-3">
+					<p><%= link_to "My Blog", controller: 'articles' %></p>
+					<p><%= link_to "New Article", new_article_path %></p>
+				</div> 
+			</div> 
+		</div> 
+	</div>
 </div>
