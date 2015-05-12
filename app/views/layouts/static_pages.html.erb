@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Static Pages</title>	
+		<%= stylesheet_link_tag    'application', params[:controller], media: 'all','data-turbolinks-track' => true %> 
+		<%= javascript_include_tag 'application',	'data-turbolinks-track' => true %>
+		<%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div id="main-container" class="container-fluid">
+			<div class="row">
+				<div id="sidebar" class="col-xs-2">
+					<!-- create vertical space -->
+					<% 10.times do %>
+						<br>
+					<% end %>
+					<div id="toolbar" class="btn-group-vertical" role="group" container="body" aria-label="...">
+						<span class="has-tooltip" data-toggle="tooltip" title="Home">	
+							<%= link_to home_path, class: "btn btn-default btn-block" do %>
+								<i class="glyphicon glyphicon-home"></i> 
+							<% end %>
+						</span>
+						<br>
+						<span class="has-tooltip" data-toggle="tooltip" title="Contact">	
+							<%= link_to contact_path, class: "btn btn-default btn-block" do %>
+								<i class="glyphicon glyphicon-envelope"></i> 
+							<% end %>
+						</span>
+						<br>
+						<span class="has-tooltip" data-toggle="tooltip" title="About">	
+							<%= link_to about_path, class: "btn btn-default btn-block" do %>
+								<i class="glyphicon glyphicon-send"></i> 
+							<% end %>
+						</span>
+						<br>
+						<span class="has-tooltip" data-toggle="tooltip" title="Project">	
+							<%= link_to project_path, class: "btn btn-default btn-block" do %>
+								<i class="glyphicon glyphicon-globe"></i> 
+							<% end %>
+						</span>
+					</div> 
+				</div>
+				<div id="main-content" class="col-xs-10">
+					<%= yield %>
+				</div>
+			</div> 
+		</div>
+	</body>
+</html>
