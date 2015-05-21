@@ -1,2 +1,16 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<div class="container-fluid">
+	<table class="table borderless">
+		<% (0..50).each do |i| %>
+			<tr>
+				<% if i % 2 == 0 %>
+					<td id="right"><%=i + 1%></td>
+					<td colspan="1"></td>
+				<% else %>
+					<td colspan="1"></td>
+					<td id="left"><%= i + 1%></td>
+				<% end %>
+			</tr>
+		<% end %> 
+	</table>
+</div>
+

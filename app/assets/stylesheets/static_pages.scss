@@ -2,3 +2,32 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+								  
+#sidebar.affix {
+	position: fixed;
+	top:200px;
+	width:100px;
+}
+
+
+td#right {
+	text-align: right;
+}
+
+td#left {
+	text-align: left;
+}
+
+.blank-row {
+	height: 200px; 
+}
+
+.borderless>thead>tr>th, 
+.borderless>tbody>tr>th, 
+.borderless>tfoot>tr>th, 
+.borderless>thead>tr>td, 
+.borderless>tbody>tr>td, 
+.borderless>tfoot>tr>td {
+	border-top: none; 
+}
