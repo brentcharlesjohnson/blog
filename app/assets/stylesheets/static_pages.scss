@@ -2,12 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-								  
 #sidebar.affix {
 	position: fixed;
-	top:200px;
-	width:100px;
+	top:33%;
+	width:8%;
 }
 
 
@@ -17,10 +15,6 @@ td#right {
 
 td#left {
 	text-align: left;
-}
-
-.blank-row {
-	height: 200px; 
 }
 
 .borderless>thead>tr>th, 
