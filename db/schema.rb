@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150612034303) do
+ActiveRecord::Schema.define(version: 20150616052741) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email"
@@ -41,6 +41,19 @@ ActiveRecord::Schema.define(version: 20150612034303) do
   end
 
   add_index "articles", ["theme_title_id"], name: "index_articles_on_theme_title_id"
+
+  create_table "images", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "ThemeTitle_id"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.string   "content_file_name"
+    t.string   "content_content_type"
+    t.integer  "content_file_size"
+    t.datetime "content_updated_at"
+  end
+
+  add_index "images", ["ThemeTitle_id"], name: "index_images_on_ThemeTitle_id"
 
   create_table "theme_titles", force: :cascade do |t|
     t.string   "title"
