@@ -4,7 +4,11 @@ Rails.application.routes.draw do
   get 'project' => 'static_pages#project'
 	get 'contact' => 'static_pages#contact'
 
-	resources :articles
+	# resource with multiple sub-resources
+	resources :theme_titles do
+		resources :articles, :imgages
+	end
+
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
