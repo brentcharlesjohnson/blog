@@ -6,6 +6,6 @@ Rails.application.config.assets.version = '1.0'
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
 
-%w( welcome articles static_pages ).each do |controller|
+%w( welcome articles static_pages theme_titles images ).each do |controller|
 	  Rails.application.config.assets.precompile += ["#{controller}.css"]
 end
