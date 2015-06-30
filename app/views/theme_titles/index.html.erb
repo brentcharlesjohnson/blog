@@ -1,0 +1,6 @@
+<h1>News From Nowhere</h1>
+<ul class="list-inline">
+<% @theme_titles.each do |t| %>
+	<li> <%= link_to  t.title, theme_title_path(t.id)  %> </li>
+<% end %>
+</ul> 
