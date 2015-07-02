@@ -8,6 +8,7 @@ class ThemeTitlesController < ApplicationController
 	end
 
 	def new
+		@theme_title = ThemeTitle.new
 	end
 
 	def edit
@@ -16,8 +17,11 @@ class ThemeTitlesController < ApplicationController
 	def create
 		@theme_title =  ThemeTitle.new(theme_title_params)
 
-		@theme_title.save
+		if @theme_title.save
 		redirect_to @theme_title
+		else
+			render 'new'
+		end
 	end
 
 	def update

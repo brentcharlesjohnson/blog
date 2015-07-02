@@ -1,5 +1,19 @@
 <h1> New Theme Title </h1>
 <%= form_for :theme_title, url: theme_titles_path  do |f| %>
+	<% if @theme_title.errors.any? %>
+		<div id="error_explanation">
+			<h2>
+				<%= pluralize(@theme_title.errors.count, "error") %>
+				prohibited this theme title from being saved: 
+			</h2>
+			<ul>
+				<% @theme_title.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<%end%>
+			</ul>
+		</div> 
+	<% end %>
+
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>
