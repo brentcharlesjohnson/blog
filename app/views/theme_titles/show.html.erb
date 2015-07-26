@@ -8,12 +8,16 @@
 </p>
 
 <strong>Content</strong>
-<% @theme_title.articles.each do |content| %>
-	<ul>
-		<li> <%= content.title %> </li>
-		<li> <%= content.text %> </li>
-	</ul>
-<% end %>
+<ul>
+	<% if @theme_title.articles.empty? %> 
+		<li> No content please check again later </li>
+	<% else %>
+		<% @theme_title.articles.each do |content| %>
+			<li> <%= content.title %> </li>
+			<li> <%= content.text %> </li>
+		<% end %>
+	<% end %>
+</ul>
 
 <%= link_to 'Back', theme_titles_path %>
 

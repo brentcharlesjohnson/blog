@@ -20,13 +20,9 @@ class ArticlesController < ApplicationController
 	end
 
 	def create
-		@article = Article.new(article_params)
-
-		if @article.save
-			redirect_to @article
-		else
-			render 'new'
-		end
+		@theme_title = ThemeTitle.find(params[:theme_title_id])
+		@article = @theme_title.articles.create(article_params)
+		redirect_to theme_title_path(@theme_title)
 	end
 
 	def update 
