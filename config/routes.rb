@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
 	# resource with multiple sub-resources
 	resources :theme_titles do
-		resources :articles, :imgages
+		resources :articles, :images
 	end
 
   get 'welcome/index'
