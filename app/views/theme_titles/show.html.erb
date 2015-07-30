@@ -8,7 +8,7 @@
 </p>
 
 <h2>Content</h2>
-<% if @theme_title.articles.empty? %> 
+<% if @theme_title.articles.empty? && @theme_title.images.empty? %> 
 	<p> No content please check again later </p>
 	<% else %>
 	<ul>
@@ -21,9 +21,18 @@
 		<strong>Text:</strong> 
 		<%= content.text %> 
 		</li>
-	<% end %>
+	<% end %> <!-- end articles -->
+	<% @theme_title.images.each do |i| %>
+		<li>
+		<strong>Title:</strong>
+		<%= i.title %>
+		</li>
+		<li>
+		<%= image_tag i.content.url(:medium) %>
+		</li>
+	<% end %> <!-- end images -->
 	</ul>
-<% end %>
+<% end %> <!-- end if -->
 
 <h2>Add an Article:</h2> 
 <%= form_for([@theme_title, @theme_title.articles.build]) do |f| %>
@@ -43,7 +52,16 @@
 
 <h2>Add an Image:</h2>
 <%= form_for([@theme_title, @theme_title.images.build]) do |f| %>
+	<p>
+	<%= f.label :title %><br>
+	<%= f.text_field :title %>
+	</p>
+	<p>
 	<%= f.file_field :content %>
+	</p>
+	<p>
+	<%= f.submit %>
+	</p>
 <% end %>
 
 <%= link_to 'Back', theme_titles_path %>
