@@ -12,14 +12,14 @@
 	<p> No content please check again later </p>
 	<% else %>
 	<ul>
-	<% @theme_title.articles.each do |content| %>
+	<% @theme_title.articles.each do |a| %>
 		<li> 
 			<strong>Title:</strong>
-			<%= content.title %> 
+			<%= a.title %> 
 		</li>
 		<li> 
 		<strong>Text:</strong> 
-		<%= content.text %> 
+		<%= a.text %> 
 		</li>
 	<% end %> <!-- end articles -->
 	<% @theme_title.images.each do |i| %>
