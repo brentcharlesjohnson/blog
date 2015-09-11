@@ -1,3 +1,15 @@
 <div>
-	<%= link_to( image_tag("landing.jpg", class: "img-responsive center-block"), controller: 'theme_titles')  %>
+	<%=  image_tag("landing.jpg", class: "img-responsive center-block",
+												 alt: "News From Nowhere", usemap: "#nowheremap") %>
+<map name="nowheremap">
+	<area shape="poly" coords="1769,1475,1748,1586,2285,1612,2292,1509"
+		href="/theme_titles" alt="Theme Titles"> 
+	<area shape="poly" coords="2436,1503,2434,1622,2991,1650,2998,1534"
+		href="/theme_titles" alt="Theme Titles"> 
+	<area shape="poly" coords="1839,1828,1824,1941,2939,2020,2940,1889"
+		href="/theme_titles" alt="Theme Titles"> 
+</map>
 </div> 
+<script> 
+imageMapResize(); 
+</script>
