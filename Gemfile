@@ -36,16 +36,21 @@ group :development, :test do
 	# add the rspec test framework
 	gem 'rspec-rails'
 
+	# add capybara to facilitate testing of page titles and more
+	gem 'capybara'
+
 	gem 'sqlite3'
 
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+	# Call 'byebug' anywhere in the code to stop execution and get a debugger
+	# console
+	gem 'byebug'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+	# Spring speeds up development by keeping your application running in the
+	# background. Read more: https://github.com/rails/spring
+	gem 'spring'
 end
 
 group :production do
