@@ -1,6 +1,5 @@
 class StaticPagesController < ApplicationController
   def home
-
   end
 
   def about
@@ -10,6 +9,7 @@ class StaticPagesController < ApplicationController
   end
 
   def contact
+		redirect_to messages_path
   end
 
 end
