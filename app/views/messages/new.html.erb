@@ -1,0 +1,32 @@
+<h1>New Message</h1>
+
+<%= form_for :message, url: messages_path do |f| %>
+	<p>
+	<%= f.label :name %><br>
+	<%= f.text_field :name %>
+	</p>
+
+	<p>
+	<%= f.label :email %><br>
+	<%= f.text_field :email %>
+	</p>
+
+	<p>
+	<%= f.label :country %><br>
+	<%= f.text_field :country %>
+	</p>
+
+	<p>
+	<%= f.label :city %><br>
+	<%= f.text_field :city %>
+	</p>
+
+	<p>
+	<%= f.label :comment %><br>
+	<%= f.text_area :comment %>
+	</p>
+
+	<p>
+	<%= f.submit %>
+	</p>
+<% end %>
