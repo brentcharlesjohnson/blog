@@ -1,5 +1,9 @@
 <h1>Guestbook</h1>
 
+<%= link_to new_message_path class: 'btn btn-primary' do %>
+	<i class="glyphicon glyphicon-pencil"></i> Sign the Guestbook
+<% end %>
+
 <table> 
 	<tr>
 		<th>Name</th>
@@ -17,4 +21,3 @@
 		</tr>
 	<% end %>
 </table>
-

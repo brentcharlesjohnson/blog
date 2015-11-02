@@ -26,7 +26,17 @@
 	<%= f.text_area :comment %>
 	</p>
 
-	<p>
-	<%= f.submit %>
-	</p>
+	
+	<span>
+	<%= button_tag(type: 'submit', class: 'btn btn-primary') do %>
+		<i class="glyphicon glyphicon-ok-sign"></i> Submit
+	<% end %>
+
+	<%= link_to messages_path class: "btn btn-primary" do %>
+		<i class="glyphicon glyphicon-remove-sign"></i> Cancel
+	<% end %>
+</span>
+	
 <% end %>
+
+
