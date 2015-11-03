@@ -12,9 +12,9 @@ describe "visiting pages" do
 		expect(page).to have_title "About | A Work in Progress"
 	end
 
-	it "displays contact title"  do
+	it "redirects and displays guest book"  do
 		visit contact_path
-		expect(page).to have_title "Contact | A Work in Progress"
+		expect(page).to have_content("Guestbook")
 	end 
 
 	it "displays project title" do
