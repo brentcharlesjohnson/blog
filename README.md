@@ -6,8 +6,8 @@ contact page.
 *    1.1.6.1 Users can directly submit comments to the administrators by way of a
 contact form on the contact page.
 
-*    1.2.4 Administrators receive notifications per e-mail when a comment is
-left by a user.
+*    ~~1.2.4 Administrators receive notifications per e-mail when a comment is
+left by a user.~~
 
 ## Use Case
 
