@@ -4,20 +4,13 @@
 	<i class="glyphicon glyphicon-pencil"></i> Sign the Guestbook
 <% end %>
 
-<table> 
-	<tr>
-		<th>Name</th>
-		<th>Country</th>
-		<th>City</th>
-		<th>Comment</th>
-	</tr>
-	
+<ul> 
 	<% @messages.each do |message| %>
-		<tr>
-			<td><%= message.name %></td>
-			<td><%= message.country %></td>
-			<td><%= message.city %></td>
-			<td><%= message.comment %></td>
-		</tr>
-	<% end %>
-</table>
+		<li>
+		<%= message.created_at.strftime("On %d/%m/%Y #{message.name} wrote:") %> 
+		</li>
+		<li>
+		<%= message.comment %>
+		</li>
+<% end %>
+</ul>
