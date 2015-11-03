@@ -5,13 +5,17 @@ class MessagesController < ApplicationController
 	end
 
 	def new
+		@message = Message.new
 	end
 
 	def create
 		@message = Message.new(message_params)
 
-		@message.save
-		redirect_to messages_path
+		if @message.save
+			redirect_to messages_path
+		else
+			render 'new'
+		end
 	end
 
 	private 
